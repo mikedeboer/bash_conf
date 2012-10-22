@@ -17,8 +17,8 @@
 [github]
 	user = mikedeboer
 [core]
-	editor = mate -w
-	excludesfile = /Users/mike/.gitignore_global
+	editor = $EDITOR
+	excludesfile = ~/.gitignore_global
 [branch]
 	autosetuprebase = always
 [difftool "sourcetree"]
