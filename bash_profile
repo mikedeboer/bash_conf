@@ -24,3 +24,8 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+if [ -e ~/nvm/nvm.sh ] ; then
+	source ~/nvm/nvm.sh
+	source ~/nvm/bash_completion
+fi

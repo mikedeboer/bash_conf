@@ -8,8 +8,8 @@ autocmd BufNewFile,BufRead * setfiletype text
 set viminfo=/20,:20,'20,h
 
 " general indent options (overridden by FileType)
-set tabstop=8
-set shiftwidth=8
+set tabstop=4
+set shiftwidth=4
 set autoindent
 set smartindent
 set cindent
