@@ -22,10 +22,16 @@ if [ -e ~/bash_conf/git-completion.bash ] ; then
 fi
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+	source `brew --prefix`/etc/bash_completion
 fi
 
 if [ -e ~/nvm/nvm.sh ] ; then
 	source ~/nvm/nvm.sh
 	source ~/nvm/bash_completion
+fi
+
+export LC_CTYPE='en_US.UTF-8'
+
+if [ -e ~/.rvm/scripts/rvm ] ; then
+	source ~/.rvm/scripts/rvm # Load RVM into a shell session as a function
 fi
