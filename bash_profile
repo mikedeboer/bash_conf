@@ -21,7 +21,7 @@ if [ -e ~/bash_conf/git-completion.bash ] ; then
 	source ~/bash_conf/git-completion.bash
 fi
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
+if [ $(which brew) -a -f `brew --prefix`/etc/bash_completion ]; then
 	source `brew --prefix`/etc/bash_completion
 fi
 
