@@ -17,7 +17,6 @@
 [github]
 	user = mikedeboer
 [core]
-	editor = $EDITOR
 	excludesfile = ~/.gitignore_global
 [branch]
 	autosetuprebase = always

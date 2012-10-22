@@ -29,13 +29,18 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls -hF'
 
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.rvm/bin:$PATH
 if [ $(uname -s) = 'Darwin' ] ; then
-	export EDITOR='/usr/local/bin/mate -w'
+	export EDITOR='mate -w'
 else
 	export EDITOR='vim'
 fi
 
+export GIT_EDITOR=$EDITOR
 export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export LC_CTYPE=en_US.UTF-8
