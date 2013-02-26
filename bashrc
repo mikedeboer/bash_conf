@@ -29,11 +29,14 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls -hF'
 
+# alias to nw
+alias nw='/Applications/node-webkit.app/Contents/MacOS/node-webkit'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.rvm/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.rvm/bin:$HOME/depot_tools:$PATH
 if [ $(uname -s) = 'Darwin' ] ; then
 	export EDITOR='mate -w'
 else

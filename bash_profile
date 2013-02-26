@@ -21,6 +21,10 @@ if [ -e ~/bash_conf/git-completion.bash ] ; then
 	source ~/bash_conf/git-completion.bash
 fi
 
+if [ -e ~/bash_conf/hg-completion.bash ] ; then
+	source ~/bash_conf/hg-completion.bash 
+fi
+
 if [[ $(which brew) != '' && -f `brew --prefix`/etc/bash_completion ]]; then
 	source `brew --prefix`/etc/bash_completion
 fi
