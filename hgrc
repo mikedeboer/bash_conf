@@ -1,38 +1,53 @@
 [ui]
 ; editor used to enter commit logs, etc.  Most text editors will work.
-editor=mate
-username=Mike de Boer <mdeboer@mozilla.com>
-ignore=/Users/mike/.hgignore_global
+editor = mate
+username = Mike de Boer <mdeboer@mozilla.com>
+ignore = /Users/mdeboer/.hgignore_global
+merge = Kaleidoscope
 [merge-tools]
-sourcetreemerge.gui=False
-sourcetreebulkmerge.gui=False
-sourcetreemerge.binary=False
-sourcetreebulkmerge.executable=/Applications/SourceTree.app/Contents/Resources/hg-merge.sh
-sourcetreemerge.args=$local $other -ancestor $base -merge $output
-sourcetreemerge.checkconflicts=True
-sourcetreemerge.premerge=True
-sourcetreemerge.executable=/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh
-sourcetreebulkmerge.premerge=False
-sourcetreebulkmerge.binary=True
+sourcetreemerge.gui = False
+sourcetreebulkmerge.gui = False
+sourcetreemerge.binary = False
+sourcetreebulkmerge.executable = /Applications/SourceTree.app/Contents/Resources/hg-merge.sh
+sourcetreemerge.args = $local $other -ancestor $base -merge $output
+sourcetreemerge.checkconflicts = True
+sourcetreemerge.premerge = True
+sourcetreemerge.executable = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh
+sourcetreebulkmerge.premerge = False
+sourcetreebulkmerge.binary = True
+Kaleidoscope.executable = /usr/local/bin/ksdiff
+Kaleidoscope.args = --merge --output $output --base $base -- $local $other
 [extdiff]
-cmd.ksdiff=/usr/local/bin/ksdiff-wrapper
-opts.ksdiff=hg
+cmd.ksdiff = /usr/local/bin/ksdiff
+opts.ksdiff = --changeset --wait --filelist
 [paths]
-try=ssh//hg.mozilla.org/try
-m-i=ssh://hg.mozilla.org/integration/mozilla-inbound
-m-c=ssh://hg.mozilla.org/mozilla-central
-m-a=ssh://hg.mozilla.org/releases/mozilla-aurora
-m-b=ssh://hg.mozilla.org/releases/mozilla-beta
+try = ssh://hg.mozilla.org/try
+m-i = ssh://hg.mozilla.org/integration/mozilla-inbound
+m-c = ssh://hg.mozilla.org/mozilla-central
+m-a = ssh://hg.mozilla.org/releases/mozilla-aurora
+m-b = ssh://hg.mozilla.org/releases/mozilla-beta
 [extensions]
-mq=
-hgext.extdiff=
-rebase=
+mq =
+hgext.extdiff =
+rebase =
+color =
+pager =
+purge =
+trychooser = ~/trychooser/trychooser
 [diff]
-git=1
-unified=8
-showfunc=1
+git = 1
+unified = 8
+showfunc = 1
 [defaults]
-commit=-v
-qnew=-U
+commit = -v
+qnew = -U
 [mq]
-plain=True
+plain = True
+[pager]
+pager = LESS=FRSXQ less
+quiet = True
+attend = diff,status,log,qdiff,blame,annotate,pdiff,glog,show
+[alias]
+show = log --patch --verbose --rev
+[hooks]
+post-push = hg phase --force --draft "mq()"
