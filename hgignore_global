@@ -4,3 +4,4 @@ syntax: glob
 .DS_Store
 .c9revisions
 .settings
+test/

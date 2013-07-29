@@ -34,6 +34,10 @@ color =
 pager =
 purge =
 trychooser = ~/trychooser/trychooser
+histedit =
+progress =
+transplant =
+qbackout = ~/Projects/qbackout
 [diff]
 git = 1
 unified = 8
@@ -43,6 +47,7 @@ commit = -v
 qnew = -U
 [mq]
 plain = True
+secret = True
 [pager]
 pager = LESS=FRSXQ less
 quiet = True
