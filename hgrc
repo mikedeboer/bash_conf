@@ -47,12 +47,9 @@ commit = -v
 qnew = -U
 [mq]
 plain = True
-secret = True
 [pager]
 pager = LESS=FRSXQ less
 quiet = True
 attend = diff,status,log,qdiff,blame,annotate,pdiff,glog,show
 [alias]
 show = log --patch --verbose --rev
-[hooks]
-post-push = hg phase --force --draft "mq()"

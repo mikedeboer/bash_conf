@@ -39,3 +39,10 @@ export LC_CTYPE='en_US.UTF-8'
 if [ -e ~/.rvm/scripts/rvm ] ; then
 	source ~/.rvm/scripts/rvm # Load RVM into a shell session as a function
 fi
+
+#if [ -e ~/Projects/emsdk_portable/emsdk_add_path ] ; then
+#	curdir=`pwd`
+#    cd ~/Projects/emsdk_portable
+#	source ~/Projects/emsdk_portable/emsdk_add_path
+#	cd $curdir
+#fi
