@@ -5,3 +5,5 @@ syntax: glob
 .c9revisions
 .settings
 test/
+.module-cache/
+bower_components/

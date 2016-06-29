@@ -38,7 +38,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.rvm/bin:$HOME/depot_tools:$PATH
 if [ $(uname -s) = 'Darwin' ] ; then
-	export EDITOR='mate -w'
+	export EDITOR='subl -w'
 else
 	export EDITOR='vim'
 fi

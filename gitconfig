@@ -14,14 +14,16 @@
 [github]
 	user = mikedeboer
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/mikedeboer/.gitignore_global
+	autocrlf = false
+	filemode = false
 [branch]
 	autosetuprebase = always
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Users/mdeboer/Library/Application Support/SourceTree/SourceTree 1.8.0.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
